@@ -1,0 +1,241 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Aula 16\simulation\qsim
+vbinary_to_bcd
+Z1 I4fEYDzYN4KN5]Cgn5m;6;2
+Z2 VYUfO]2N3<6Eohmg`FMzKD2
+Z3 dC:\Users\Jefferson\Desktop\Aula 16\simulation\qsim
+Z4 w1565362439
+Z5 8Aula16.vo
+Z6 FAula16.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Aula16.vo|
+Z9 o-work work -O0
+Z10 !s100 NnUW@=6MGEEILFKJi94mm1
+Z11 !s108 1565362440.907000
+Z12 !s107 Aula16.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vbinary_to_bcd_vlg_check_tst
+Z13 I;ShHCU4lnIHBCCOLCHcic3
+Z14 VSUQkUjn>m1>FWnk6U^Y]=2
+R3
+Z15 w1565362438
+Z16 8Aula16.vt
+Z17 FAula16.vt
+L0 59
+R7
+r1
+31
+Z18 !s108 1565362441.133000
+Z19 !s107 Aula16.vt|
+Z20 !s90 -work|work|Aula16.vt|
+R9
+Z21 !s100 R9z9]Hfj?H]]g=4a<Rgh@0
+!i10b 1
+!s85 0
+!s101 -O0
+vbinary_to_bcd_vlg_sample_tst
+Z22 I9?4<6HXWBW3Jd4zCz<gAh2
+Z23 VTBn:^fk:3<iHaiJ@:[d0C2
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+31
+R18
+R19
+R20
+R9
+Z24 !s100 9izgCEL0R@BG]?_hd8izf2
+!i10b 1
+!s85 0
+!s101 -O0
+vbinary_to_bcd_vlg_vec_tst
+Z25 IO95b5z86ZMUVF7N[N1_aA3
+Z26 VhOzNHedLH:QX1X:HG0hMV3
+R3
+R15
+R16
+R17
+Z27 L0 447
+R7
+r1
+31
+R18
+R19
+R20
+R9
+Z28 !s100 9ZD`nNOkMoXMa2C72nehP0
+!i10b 1
+!s85 0
+!s101 -O0
+vPEx03SomadorSubtradorAcumulador
+Z29 !s100 ODkAGYHU:ASjX3185Nf3h3
+Z30 I@6M?9i6aYS`c0KPh60I=W3
+Z31 VD=dBcoOgi@@?f3dgYK<LY2
+Z32 dE:\Aula 16\simulation\qsim
+Z33 w1564790744
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z34 n@p@ex03@somador@subtrador@acumulador
+Z35 !s108 1564790750.619000
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vPEx03SomadorSubtradorAcumulador_vlg_check_tst
+Z36 !s100 ?N07Ge`ccUEN9f?2^KY[z2
+Z37 IOQ9QHV;`Lhgj@Mm8e]iDe0
+Z38 Vl1:K69:iETb5ozbH5?I2m1
+R32
+Z39 w1564790743
+R16
+R17
+L0 63
+R7
+r1
+31
+Z40 !s108 1564790754.488000
+R19
+R20
+R9
+Z41 n@p@ex03@somador@subtrador@acumulador_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vPEx03SomadorSubtradorAcumulador_vlg_sample_tst
+Z42 !s100 0o7YZ??4;X>C@KHkO]6Vn0
+Z43 I=agID_ioIoP8V5P@fj[Jj2
+Z44 Ve4YE[UEo5>9bK`JBT>F233
+R32
+R39
+R16
+R17
+L0 29
+R7
+r1
+31
+R40
+R19
+R20
+R9
+Z45 n@p@ex03@somador@subtrador@acumulador_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vPEx03SomadorSubtradorAcumulador_vlg_vec_tst
+Z46 INJ>LJO=edIfXe^Ad?c4Ml2
+Z47 VYgQObVefTbgJI;WQ^UcBQ2
+R32
+R39
+R16
+R17
+Z48 L0 211
+R7
+r1
+31
+R40
+R19
+R20
+R9
+Z49 n@p@ex03@somador@subtrador@acumulador_vlg_vec_tst
+Z50 !s100 SDS6^]BA2N1o_j5m^MPT?0
+!i10b 1
+!s85 0
+!s101 -O0
+vProjeto
+Z51 I2F<M4Da7mdVbdzZQm880U1
+Z52 V]H;;n8GZM;?IlnVoGj:n[2
+Z53 dC:\Users\Flavio\Documents\UFABC\2019.2\Sistemas\Aula 16\simulation\qsim
+Z54 w1566573656
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z55 n@projeto
+!i10b 1
+Z56 !s100 zX83QC=C=2J5XVzZ[Jcha0
+!s85 0
+Z57 !s108 1566573672.674000
+R12
+!s101 -O0
+vProjeto_vlg_check_tst
+!i10b 1
+!s100 Fb__5=]g:HF8YaAdo59OS0
+IJbg>jcTb?ReDhkYDkRk^^1
+Z58 VIhP?N>9^@a=A1Z2TLU?SZ3
+R53
+Z59 w1566573652
+R16
+R17
+L0 59
+R7
+r1
+!s85 0
+31
+Z60 !s108 1566573676.298000
+Z61 !s107 Aula16.vt|
+R20
+!s101 -O0
+R9
+Z62 n@projeto_vlg_check_tst
+vProjeto_vlg_sample_tst
+!i10b 1
+!s100 MOn9PGKG0^8>Kcfo;7`6A3
+IClh8UD:36f:Z<T9NRcbVa3
+V?>:Pf``<>USJm9bWbZA>I2
+R53
+R59
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R60
+R61
+R20
+!s101 -O0
+R9
+Z63 n@projeto_vlg_sample_tst
+vProjeto_vlg_vec_tst
+!i10b 1
+!s100 B^FLCE7nb;;cRD=^jz72;1
+I4kDY2J2D8=NHCdU^9Yae?2
+Z64 VX?_OE;RQcG8ZnU5V?h[YV2
+R53
+R59
+R16
+R17
+L0 663
+R7
+r1
+!s85 0
+31
+R60
+R61
+R20
+!s101 -O0
+R9
+Z65 n@projeto_vlg_vec_tst

@@ -1,0 +1,22 @@
+|MEM
+RDMEntrada[0] => auxSaida.DATAB
+RDMEntrada[0] => auxSaida.DATAB
+RDMEntrada[1] => auxSaida.DATAB
+RDMEntrada[1] => auxSaida.DATAB
+RDMEntrada[1] => auxSaida[3].DATAIN
+RDMEntrada[1] => auxSaida[2].DATAIN
+REMEntrada[0] => ~NO_FANOUT~
+REMEntrada[1] => ~NO_FANOUT~
+Endereco[0] => Decoder0.IN1
+Endereco[0] => Mux0.IN1
+Endereco[0] => Add0.IN2
+Leitura => Saida.OUTPUTSELECT
+Leitura => Saida.OUTPUTSELECT
+Escrita => auxSaida[0].CLK
+Escrita => auxSaida[1].CLK
+Escrita => auxSaida[2].CLK
+Escrita => auxSaida[3].CLK
+Saida[0] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+Saida[1] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+
+

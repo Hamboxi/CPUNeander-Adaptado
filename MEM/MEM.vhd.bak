@@ -1,0 +1,30 @@
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.all;
+USE ieee.STD_LOGIC_1164.all;
+
+ENTITY MEM IS
+	GENERIC (bitsDados: INTEGER := 1;
+	bitsEnd: INTEGER := 4);
+	
+	PORT(RDMEntrada: IN STD_LOGIC_VECTOR(bitsDados-1 DOWNTO 0);
+	REMEntrada: IN STD_LOGIC_VECTOR(bitsDados-1 DOWNTO 0);
+	Endereço: IN STD_LOGIC_VECTOR(bitsEnd-1 DOWNTO 0);
+	Leitura, Escrita: IN STD_LOGIC;
+	Saida: OUT STD_LOGIC_VECTOR(bitsDados-1 DOWNTO 0));
+END MEM;
+
+ARCHITECTURE comportamental OF MEM IS
+	SIGNAL Celula: STD_LOGIC_VECTOR((2**bitsEnd)-1 DOWNTO 0);
+	BEGIN
+	PROCESS(Leitura, Escrita, Endereço)
+		VARIABLE i: INTEGER;
+		BEGIN
+		IF(Leitura = '1') THEN
+			FOR i IN 0 TO 15 LOOP
+				IF(i=Entrada) THEN
+					Saida <= Celula(i);
+				END IF;
+			END LOOP;
+		END IF;
+	END PROCESS;
+END comportamental;

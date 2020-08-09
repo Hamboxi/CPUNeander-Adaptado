@@ -1,0 +1,31 @@
+LIBRARY ieee;
+USE ieee.STD_LOGIC_1164.all;
+USE ieee.STD_LOGIC_UNSIGNED.all;
+
+ENTITY ULA IS
+	GENERIC (bitsDados: INTEGER := 1;
+	bitsSelec: INTEGER := 3);
+	
+	PORT
+	(X, Y: STD_LOGIC_VECTOR(bitsDados-1 DOWNTO 0);
+	SelULA: STD_LOGIC_VECTOR(bitsSelec-1 DOWNTO 0);
+	AC: STD_LOGIC_VECTOR(bitsDados-1 DOWNTO 0);
+	N, Z: STD_LOGIC);
+END ULA;
+
+ARCHITECTURE comportamental OF ULA IS
+	BEGIN
+	PROCESS(X, Y)
+		BEGIN
+		CASE selULA IS
+			WHEN "000" => AC <= X+Y;
+			WHEN "001" => AC <= X and Y;
+			WHEN "010" => AC <= X or Y;
+			WHEN "011" => AC <= not X;
+			WHEN "100" => AC <= Y;
+			When OTHERS => NULL;
+		END CASE;
+	END PROCESS;
+END a;
+			
+			

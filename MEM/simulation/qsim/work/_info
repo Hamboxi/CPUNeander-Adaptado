@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Flavio\Documents\UFABC\2019.2\Sistemas\Neander\MEM\simulation\qsim
+vMEM
+Z1 !s100 aA5dimBk?hBST0o8laMI_1
+Z2 IlXaRZGWC52R2[_WWZ2Yag3
+Z3 VNcjoVf<jSiC<[D`k5gVe32
+Z4 dC:\Users\Flavio\Documents\UFABC\2019.2\Sistemas\Neander\MEM\simulation\qsim
+Z5 w1565570674
+Z6 8MEM.vo
+Z7 FMEM.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|MEM.vo|
+Z10 o-work work -O0
+Z11 n@m@e@m
+!i10b 1
+!s85 0
+Z12 !s108 1565570675.022000
+Z13 !s107 MEM.vo|
+!s101 -O0
+vMEM_vlg_check_tst
+!i10b 1
+Z14 !s100 5iKg>IhN_:RbAVC>7DI^e0
+Z15 I2BhKVEIRecZE6^?]39MI`3
+Z16 VGai=ZEjV9fKlFQ?eaO54h0
+R4
+Z17 w1565570672
+Z18 8MEM.vt
+Z19 FMEM.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z20 !s108 1565570675.315000
+Z21 !s107 MEM.vt|
+Z22 !s90 -work|work|MEM.vt|
+!s101 -O0
+R10
+Z23 n@m@e@m_vlg_check_tst
+vMEM_vlg_sample_tst
+!i10b 1
+Z24 !s100 >4?TT<J=a32?_Cm8hT3@90
+Z25 IVX?Fkn>F2LD_kL6iF8WTW3
+Z26 V[Sl2<:3U2KH>8k>^>bZIH3
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@m@e@m_vlg_sample_tst
+vMEM_vlg_vec_tst
+!i10b 1
+!s100 4D;2PA;`KzR8PVSMW<8PW2
+I>1UVbniI;`]Ye36n?>AG?2
+Z28 VbzGiSPLn3oNA6zU72:Ch;0
+R4
+R17
+R18
+R19
+Z29 L0 177
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@m@e@m_vlg_vec_tst

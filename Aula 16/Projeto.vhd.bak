@@ -1,0 +1,48 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY Projeto IS
+	PORT (Binario : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+			Operacao : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+			Pulso, Zerar : IN STD_LOGIC;
+			Display4, Display3, Display2, Display1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+			LEDSinal : OUT STD_LOGIC);
+END Projeto;
+
+ARCHITECTURE logic OF Projeto IS
+
+	SIGNAL S : STD_LOGIC_VECTOR(12 DOWNTO 0);
+	SIGNAL ToDisplay1, ToDisplay2, ToDisplay3, ToDisplay4 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+	COMPONENT Calcula 
+		PORT (Bin : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+				Chave : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+				Clock, Reset : IN STD_LOGIC;
+				Acumulador : BUFFER STD_LOGIC_VECTOR(12 DOWNTO 0));
+	END COMPONENT;
+
+	COMPONENT BinarioBCD 
+		PORT(BINARY : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+			  BCD_UNI, BCD_TEN, BCD_HUN, BCD_THO : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			  Negativo : OUT STD_LOGIC);
+	END COMPONENT;
+	
+	COMPONENT BCD7Segmentos 
+		PORT(A : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+			  B : OUT STD_LOGIC_VECTOR(6 DOWNTO 0));
+	END COMPONENT;
+
+BEGIN
+	
+	G1: Calcula PORT MAP (Binario, Operacao, Pulso, Zerar, S);
+	G2: BinarioBCD PORT MAP (S, ToDisplay1, ToDisplay2, ToDisplay3, ToDisplay4, LEDSinal);
+	G3: BCD7Segmentos PORT MAP (ToDisplay4, Display4);
+	G4: BCD7Segmentos PORT MAP (ToDisplay3, Display3);
+	G5: BCD7Segmentos PORT MAP (ToDisplay2, Display2);
+	G6: BCD7Segmentos PORT MAP (ToDisplay1, Display1);
+
+END logic;
+
+	
+

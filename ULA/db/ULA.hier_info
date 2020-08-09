@@ -1,0 +1,20 @@
+|ULA
+X[0] => Add0.IN1
+X[0] => AC.IN0
+X[0] => AC.IN0
+X[0] => Mux0.IN3
+Y[0] => Add0.IN2
+Y[0] => AC.IN1
+Y[0] => AC.IN1
+Y[0] => Mux0.IN4
+SelULA[0] => Mux0.IN7
+SelULA[0] => Mux1.IN10
+SelULA[1] => Mux0.IN6
+SelULA[1] => Mux1.IN9
+SelULA[2] => Mux0.IN5
+SelULA[2] => Mux1.IN8
+AC[0] <= AC[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+N <= N.DB_MAX_OUTPUT_PORT_TYPE
+Z <= AC[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

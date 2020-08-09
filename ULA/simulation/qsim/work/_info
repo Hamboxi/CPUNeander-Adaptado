@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Flavio\Documents\UFABC\2019.2\Sistemas\Neander\ULA\simulation\qsim
+vULA
+Z1 I_TfmGa7<_0WbUn53XV5Pk3
+Z2 VlM5Z5ZY<=>;5ClSQgB=z33
+Z3 dC:\Users\Flavio\Documents\UFABC\2019.2\Sistemas\Neander\ULA\simulation\qsim
+Z4 w1565480504
+Z5 8ULA.vo
+Z6 FULA.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@u@l@a
+!i10b 1
+Z10 !s100 4Hi16eB<AkEhdTek1[6ZJ0
+!s85 0
+Z11 !s108 1565480525.316000
+Z12 !s107 ULA.vo|
+Z13 !s90 -work|work|ULA.vo|
+!s101 -O0
+vULA_vlg_check_tst
+!i10b 1
+!s100 2z;o:mHRfHikAW:iYQk183
+IW4l=4Kfl>1H8BD`IGzaQS2
+Vi[0YLoK_Whd4=AlK22HFO1
+R3
+Z14 w1565480499
+Z15 8ULA.vt
+Z16 FULA.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1565480525.755000
+Z18 !s107 ULA.vt|
+Z19 !s90 -work|work|ULA.vt|
+!s101 -O0
+R8
+n@u@l@a_vlg_check_tst
+vULA_vlg_sample_tst
+!i10b 1
+!s100 RafXSel6V<]=D>86[95_?0
+IIS32lG]^fd2Z1C9<QS@;I0
+Vh2^3?Q^FKbko5?mf0KI`g2
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@u@l@a_vlg_sample_tst
+vULA_vlg_vec_tst
+!i10b 1
+!s100 M`BAZMChm7@aGn0IS<mF[3
+Iz^;X?EcFeo<9TBDJobbNi3
+V@H?nKIIOPXSf=Pjh4d^VA0
+R3
+R14
+R15
+R16
+L0 216
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@u@l@a_vlg_vec_tst

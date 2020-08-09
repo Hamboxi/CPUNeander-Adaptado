@@ -1,0 +1,516 @@
+Analysis & Synthesis report for Neander
+Mon Aug 19 18:45:56 2019
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: Top-level Entity: |Neander
+ 14. Parameter Settings for User Entity Instance: Registrador:AC
+ 15. Parameter Settings for User Entity Instance: Registrador:PC
+ 16. Parameter Settings for User Entity Instance: Registrador:RDM
+ 17. Parameter Settings for User Entity Instance: Registrador:aREM
+ 18. Parameter Settings for User Entity Instance: ULA:aULA
+ 19. Parameter Settings for User Entity Instance: MEM:aMEM
+ 20. Port Connectivity Checks: "ULA:aULA"
+ 21. Port Connectivity Checks: "Registrador:PC"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Aug 19 18:45:55 2019           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Neander                                         ;
+; Top-level Entity Name              ; Neander                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 85                                              ;
+;     Total combinational functions  ; 69                                              ;
+;     Dedicated logic registers      ; 27                                              ;
+; Total registers                    ; 27                                              ;
+; Total pins                         ; 50                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; Neander            ; Neander            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; ULA/ULA.vhd                      ; yes             ; User VHDL File  ; C:/Users/Flavio/Documents/UFABC/2019.2/Sistemas/Neander/ULA/ULA.vhd                 ;         ;
+; Registrador/Registrador.vhd      ; yes             ; User VHDL File  ; C:/Users/Flavio/Documents/UFABC/2019.2/Sistemas/Neander/Registrador/Registrador.vhd ;         ;
+; MEM/MEM.vhd                      ; yes             ; User VHDL File  ; C:/Users/Flavio/Documents/UFABC/2019.2/Sistemas/Neander/MEM/MEM.vhd                 ;         ;
+; CPUNeander/Neander.vhd           ; yes             ; User VHDL File  ; C:/Users/Flavio/Documents/UFABC/2019.2/Sistemas/Neander/CPUNeander/Neander.vhd      ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 85    ;
+;                                             ;       ;
+; Total combinational functions               ; 69    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 24    ;
+;     -- 3 input functions                    ; 38    ;
+;     -- <=2 input functions                  ; 7     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 62    ;
+;     -- arithmetic mode                      ; 7     ;
+;                                             ;       ;
+; Total registers                             ; 27    ;
+;     -- Dedicated logic registers            ; 27    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 50    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 27    ;
+; Total fan-out                               ; 313   ;
+; Average fan-out                             ; 2.14  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
+; |Neander                   ; 69 (7)            ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |Neander                 ; work         ;
+;    |Registrador:RDM|       ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Neander|Registrador:RDM ; work         ;
+;    |ULA:aULA|              ; 49 (49)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Neander|ULA:aULA        ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; ULA:aULA|AC[0]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[1]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[2]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[3]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[4]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[5]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[6]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; ULA:aULA|AC[7]                                     ; ULA:aULA|Mux8       ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; MEM:aMEM|auxSaida[23..31]              ; Stuck at GND due to stuck port data_in ;
+; R                                      ; Stuck at VCC due to stuck port data_in ;
+; MEM:aMEM|auxSaida[0..22]               ; Stuck at GND due to stuck port clock   ;
+; auxCargaREM[0..3]                      ; Lost fanout                            ;
+; W                                      ; Lost fanout                            ;
+; Total Number of Removed Registers = 38 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                  ;
++-----------------------+---------------------------+------------------------------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                                                   ;
++-----------------------+---------------------------+------------------------------------------------------------------------------------------+
+; R                     ; Stuck at VCC              ; MEM:aMEM|auxSaida[0], MEM:aMEM|auxSaida[4], MEM:aMEM|auxSaida[8],                        ;
+;                       ; due to stuck port data_in ; MEM:aMEM|auxSaida[12], MEM:aMEM|auxSaida[5], MEM:aMEM|auxSaida[9],                       ;
+;                       ;                           ; MEM:aMEM|auxSaida[13], MEM:aMEM|auxSaida[6], MEM:aMEM|auxSaida[10],                      ;
+;                       ;                           ; MEM:aMEM|auxSaida[14], MEM:aMEM|auxSaida[7], MEM:aMEM|auxSaida[11],                      ;
+;                       ;                           ; MEM:aMEM|auxSaida[15], MEM:aMEM|auxSaida[18], MEM:aMEM|auxSaida[16],                     ;
+;                       ;                           ; MEM:aMEM|auxSaida[17]                                                                    ;
+; MEM:aMEM|auxSaida[23] ; Stuck at GND              ; MEM:aMEM|auxSaida[1], MEM:aMEM|auxSaida[2], MEM:aMEM|auxSaida[3],                        ;
+;                       ; due to stuck port data_in ; MEM:aMEM|auxSaida[22], MEM:aMEM|auxSaida[20], MEM:aMEM|auxSaida[21],                     ;
+;                       ;                           ; MEM:aMEM|auxSaida[19], auxCargaREM[0], auxCargaREM[1], auxCargaREM[2], auxCargaREM[3], W ;
++-----------------------+---------------------------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 27    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 27    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 16:1               ; 3 bits    ; 30 LEs        ; 9 LEs                ; 21 LEs                 ; Yes        ; |Neander|selUAL[2]                 ;
+; 1:1                ; 8 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Neander|Registrador:AC|Saida[7]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Neander|Registrador:aREM|Saida[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Neander|MEM:aMEM|Saida            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Neander|MEM:aMEM|Mux0             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Neander|Registrador:RDM|Saida[3]  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Neander|ULA:aULA|Mux1             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Neander|MEM:aMEM|Mux2             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Neander ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; bitsDados      ; 8     ; Signed Integer                                 ;
+; bitsEnd        ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador:AC ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; bitsdados      ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador:PC ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; bitsdados      ; 4     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador:RDM ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; bitsdados      ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Registrador:aREM ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; bitsdados      ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULA:aULA ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; bitsdados      ; 8     ; Signed Integer               ;
+; bitsselec      ; 3     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEM:aMEM ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; bitsdados      ; 8     ; Signed Integer               ;
+; bitsend        ; 4     ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA:aULA"                                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; n    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Registrador:PC"                                                                      ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Aug 19 18:45:53 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Neander -c Neander
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file ula/ula.vhd
+    Info (12022): Found design unit 1: ULA-comportamental
+    Info (12023): Found entity 1: ULA
+Info (12021): Found 2 design units, including 1 entities, in source file registrador/registrador.vhd
+    Info (12022): Found design unit 1: Registrador-comportamental
+    Info (12023): Found entity 1: Registrador
+Info (12021): Found 2 design units, including 1 entities, in source file mem/mem.vhd
+    Info (12022): Found design unit 1: MEM-comportamental
+    Info (12023): Found entity 1: MEM
+Info (12021): Found 2 design units, including 1 entities, in source file cpuneander/neander.vhd
+    Info (12022): Found design unit 1: Neander-comportamental
+    Info (12023): Found entity 1: Neander
+Info (12127): Elaborating entity "Neander" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Neander.vhd(63): used implicit default value for signal "IncrementaPC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Neander.vhd(63): used implicit default value for signal "Sel" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at Neander.vhd(63): object "auxN" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Neander.vhd(63): object "auxZ" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at Neander.vhd(65): used implicit default value for signal "auxCargaAC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at Neander.vhd(67): used implicit default value for signal "auxCargaPC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at Neander.vhd(95): signal "Sel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "Registrador" for hierarchy "Registrador:AC"
+Info (12128): Elaborating entity "Registrador" for hierarchy "Registrador:PC"
+Info (12128): Elaborating entity "Registrador" for hierarchy "Registrador:RDM"
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:aULA"
+Warning (10541): VHDL Signal Declaration warning at ULA.vhd(13): used implicit default value for signal "N" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at ULA.vhd(13): used implicit default value for signal "Z" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at ULA.vhd(20): signal "SelULA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at ULA.vhd(18): inferring latch(es) for signal or variable "AC", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "AC[0]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[1]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[2]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[3]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[4]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[5]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[6]" at ULA.vhd(18)
+Info (10041): Inferred latch for "AC[7]" at ULA.vhd(18)
+Info (12128): Elaborating entity "MEM" for hierarchy "MEM:aMEM"
+Warning (10027): Verilog HDL or VHDL warning at the MEM.vhd(30): index expression is not wide enough to address all of the elements in the array
+Warning (10631): VHDL Process Statement warning at MEM.vhd(18): inferring latch(es) for signal or variable "Saida", which holds its previous value in one or more paths through the process
+Warning (10873): Using initial value X (don't care) for net "Saida[15..8]" at MEM.vhd(13)
+Info (10041): Inferred latch for "Saida[0]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[1]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[2]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[3]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[4]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[5]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[6]" at MEM.vhd(18)
+Info (10041): Inferred latch for "Saida[7]" at MEM.vhd(18)
+Warning (13012): Latch ULA:aULA|AC[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Warning (13012): Latch ULA:aULA|AC[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal selUAL[2]
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 24 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "X[0]"
+    Warning (15610): No output dependent on input pin "X[1]"
+    Warning (15610): No output dependent on input pin "X[2]"
+    Warning (15610): No output dependent on input pin "X[3]"
+    Warning (15610): No output dependent on input pin "X[4]"
+    Warning (15610): No output dependent on input pin "X[5]"
+    Warning (15610): No output dependent on input pin "X[6]"
+    Warning (15610): No output dependent on input pin "X[7]"
+    Warning (15610): No output dependent on input pin "CargaAC[0]"
+    Warning (15610): No output dependent on input pin "CargaAC[1]"
+    Warning (15610): No output dependent on input pin "CargaAC[2]"
+    Warning (15610): No output dependent on input pin "CargaAC[3]"
+    Warning (15610): No output dependent on input pin "CargaAC[4]"
+    Warning (15610): No output dependent on input pin "CargaAC[5]"
+    Warning (15610): No output dependent on input pin "CargaAC[6]"
+    Warning (15610): No output dependent on input pin "CargaAC[7]"
+    Warning (15610): No output dependent on input pin "CargaPC[0]"
+    Warning (15610): No output dependent on input pin "CargaPC[1]"
+    Warning (15610): No output dependent on input pin "CargaPC[2]"
+    Warning (15610): No output dependent on input pin "CargaPC[3]"
+    Warning (15610): No output dependent on input pin "CargaREM[1]"
+    Warning (15610): No output dependent on input pin "CargaREM[0]"
+    Warning (15610): No output dependent on input pin "CargaREM[2]"
+    Warning (15610): No output dependent on input pin "CargaREM[3]"
+Info (21057): Implemented 143 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 42 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 93 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4627 megabytes
+    Info: Processing ended: Mon Aug 19 18:45:56 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

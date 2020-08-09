@@ -1,0 +1,18 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY binary_to_bcd IS
+	PORT(EN, SIG : IN STD_LOGIC;
+		  BINARY : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
+		  BCD_UNI : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  BCD_TEN : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  BCD_HUN : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  BCD_THO : IN STD_LOGIC_VECTOR(3 DOWNTO 0));
+END binary_to_bcd;
+
+ARCHITECTURE logic OF binary_to_bcd IS
+BEGIN
+	FOR i IN 0 TO 12 loop
+	
+	END LOOP;

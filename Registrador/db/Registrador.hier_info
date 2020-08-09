@@ -1,0 +1,6 @@
+|Registrador
+X[0] => Saida.DATAB
+Carga[0] => Saida.OUTPUTSELECT
+Saida[0] <= Saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
